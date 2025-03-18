@@ -1,13 +1,18 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteContact } from "../../redux/contacts/operations";
 import s from "./Contact.module.css";
-import { deleteContact } from "../../redux/contactsOps";
-
+import { selectDeletingIds } from "../../redux/contacts/selectors";
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
+  const deletingIds = useSelector(selectDeletingIds);
+  const isDeleting = deletingIds.includes(id);
 
   const handleDelete = () => {
-    dispatch(deleteContact(id));
+    if (!isDeleting) {
+      dispatch(deleteContact(id));
+    }
   };
+
   return (
     <div>
       <p>{name}</p>

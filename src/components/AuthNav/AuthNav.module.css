@@ -1,0 +1,20 @@
+.authBtn {
+  /* width: 130px;
+  height: 50px; */
+  background-color: wheat;
+  /* font-size: 16px;
+   color: rgb(13, 13, 60);
+  padding: 16px;
+  top: 0; */
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 6px;
+  min-width: 70px;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.authBtn:hover {
+  color: rgb(13, 13, 60);
+}

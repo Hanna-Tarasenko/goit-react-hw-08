@@ -3,7 +3,8 @@ import s from "./ContactList.module.css";
 import { IoMdContact } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { useSelector } from "react-redux";
-import { selectFilteredContacts } from "../../redux/contactsSlice";
+import { selectFilteredContacts } from "../../redux/contacts/selectors";
+// import { selectFilteredContacts } from "../../redux/contactsSlice";
 
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
