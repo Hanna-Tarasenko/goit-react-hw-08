@@ -3,7 +3,7 @@ import s from "./RegistrationPage.module.css";
 const RegistrationPage = () => {
   return (
     <div>
-      <h2 className={s.header}>Register</h2>
+      <h5 className={s.header}>Register</h5>
       <RegistrationForm />
     </div>
   );
